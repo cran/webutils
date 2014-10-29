@@ -1,0 +1,16 @@
+a8bfc08e565ebcd0b499e969b76fb0e9 *DESCRIPTION
+be73b938ae160ea0bd1b438c6059ecb6 *LICENSE
+c1a7399d3d5e22e4b21905eb84c1a0dc *NAMESPACE
+aac5ed5ef6ba7244c672713c02839f8d *R/demo_httpuv.R
+0f00a84778e122d62e6badd75bb6bfae *R/demo_rhttpd.R
+0f06820c1caf6da3c45c3f3abbecdda4 *R/get_boundary.R
+1640a8439332ea717baebd594055ea93 *R/parse_http.R
+0a9389cca4a6d2589cfec91728c033e9 *R/parse_multipart.R
+81acd0aaa04835098cdfd3b6c739d5ae *R/parse_query.R
+1ffdcddecb01de1cb50796450d6e5dcd *R/util.R
+c2e0f93503193f7f6e8dd4bdc008e196 *inst/testpage.html
+e39c6931b7f87d2069ffa36a0c342c31 *man/demo_httpuv.Rd
+d8e53ceba0485e0a6d2952ff187326a9 *man/demo_rhttpd.Rd
+73730332b0bb3083893efbf11fa91bb6 *man/parse_http.Rd
+1fb0b4330f90507638d5737e4a463f2f *man/parse_multipart.Rd
+848139a38c3153ee3f51d750b18b682f *man/parse_query.Rd
