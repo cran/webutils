@@ -52,9 +52,14 @@ demo_rhttpd <- function(){
     }
   }
 
-  # Start the built-in R dynamic help server.
-  try(startDynamicHelp(TRUE), silent=TRUE);
-  port <- getFromNamespace("httpdPort", "tools")
+  # Start rhttpd and get port
+  port <- if(R.version[["svn rev"]] < 67550) {
+    try(startDynamicHelp(TRUE), silent=TRUE);
+    getFromNamespace("httpdPort", "tools");
+  } else {
+    startDynamicHelp(NA);
+  }
+
   handlers_env <- getFromNamespace(".httpd.handlers.env", "tools")
   assign("test", rhttpd_handler, handlers_env)
   url <- paste0("http://localhost:", port, "/custom/test")
