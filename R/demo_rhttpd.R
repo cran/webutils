@@ -4,7 +4,7 @@
 #' upload to demo the multipart parser.
 #
 #' @export
-#' @importFrom tools startDynamicHelp
+#' @family demo
 demo_rhttpd <- function(){
   rhttpd_handler <- function(reqpath, reqquery, reqbody, reqheaders){
 
@@ -15,17 +15,8 @@ demo_rhttpd <- function(){
     http_method <- sub("Request-Method: ?", "", http_method, ignore.case=TRUE);
 
     # Show HTML page for GET requests.
-    if(http_method == "GET" || is.null(reqbody)){
-      message("Received HTTP GET request: ", reqpath)
-      testpage <- system.file("testpage.html", package="webutils");
-      stopifnot(file.exists(testpage))
-      list(
-        "payload" = readBin(testpage, raw(), n=file.info(testpage)$size),
-        "content-type" = "text/html",
-        "headers" = NULL,
-        "status code" = 200
-      )
-    } else {
+    if(tolower(http_method) %in% c("post", "put") && length(reqbody)){
+
       # Parse the multipart/form-data
       message("Received HTTP POST request.")
 
@@ -33,7 +24,7 @@ demo_rhttpd <- function(){
       postdata <- parse_http(reqbody, content_type)
 
       # Print it to the R console (just for fun)
-      str(postdata)
+      utils::str(postdata)
 
       # process this form
       username <- rawToChar(as.raw(postdata$username$value))
@@ -49,20 +40,30 @@ demo_rhttpd <- function(){
         "headers" = NULL,
         "status code" = 200
       )
+    } else {
+      message("Received HTTP GET request: ", reqpath)
+      testpage <- system.file("testpage.html", package="webutils");
+      stopifnot(file.exists(testpage))
+      list(
+        "payload" = readBin(testpage, raw(), n=file.info(testpage)$size),
+        "content-type" = "text/html",
+        "headers" = NULL,
+        "status code" = 200
+      )
     }
   }
 
   # Start rhttpd and get port
   port <- if(R.version[["svn rev"]] < 67550) {
-    try(startDynamicHelp(TRUE), silent=TRUE);
-    getFromNamespace("httpdPort", "tools");
+    try(tools::startDynamicHelp(TRUE), silent=TRUE);
+    utils::getFromNamespace("httpdPort", "tools");
   } else {
-    startDynamicHelp(NA);
+    tools::startDynamicHelp(NA);
   }
 
-  handlers_env <- getFromNamespace(".httpd.handlers.env", "tools")
+  handlers_env <- utils::getFromNamespace(".httpd.handlers.env", "tools")
   assign("test", rhttpd_handler, handlers_env)
   url <- paste0("http://localhost:", port, "/custom/test")
   message("Opening ", url)
-  browseURL(url)
+  utils::browseURL(url)
 }

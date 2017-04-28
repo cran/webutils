@@ -1,18 +1,19 @@
 Package: webutils
 Type: Package
-Title: Utility Functions for Web Applications
-Version: 0.4
+Title: Utility Functions for Developing Web Applications
+Version: 0.5
 Author: Jeroen Ooms
-Maintainer: Jeroen Ooms <jeroen.ooms@stat.ucla.edu>
-Description: Utility functions for developing web applications. Includes parsers
-    for application/x-www-form-urlencoded as well as multipart/form-data
-    and examples of using the parser with either httpuv or rhttpd.
+Maintainer: Jeroen Ooms <jeroen@berkeley.edu>
+Description: High performance in-memory http request parser for application/json, 
+    multipart/form-data, and application/x-www-form-urlencoded requests. Includes
+    live demo of hosting and parsing multipart forms with either 'httpuv' or 'rhttpd'.
 License: MIT + file LICENSE
-URL: https://github.com/jeroenooms/webutils
-BugReports: https://github.com/jeroenooms/webutils/issues
-Imports: tools, utils, stats, jsonlite
-Suggests: httpuv
-NeedsCompilation: no
-Packaged: 2015-10-27 13:48:20 UTC; jeroen
+URL: https://github.com/jeroen/webutils
+BugReports: https://github.com/jeroen/webutils/issues
+Imports: jsonlite
+Suggests: curl (>= 2.5), httpuv, testthat
+RoxygenNote: 6.0.1
+NeedsCompilation: yes
+Packaged: 2017-04-28 21:43:45 UTC; jeroen
 Repository: CRAN
-Date/Publication: 2015-10-27 16:26:05
+Date/Publication: 2017-04-28 23:07:50 UTC
