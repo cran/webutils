@@ -1,10 +1,10 @@
-d5f1de5fa244888f56c51fdf017d2bab *DESCRIPTION
+2722305e3e2be5a1c5949f5863ad3c6d *DESCRIPTION
 1ee0683cce6d3479250337954c075d63 *LICENSE
 0a3b86119731bfb2f20a16f7c64d2a4a *NAMESPACE
-01fdb7a9e94535a0df2b0e7a1bf58007 *NEWS
-af79278768054837e710e7ad68e9938c *R/demo_httpuv.R
+9ec5bf5a874b7a268f9a5547e1a3aff8 *NEWS
+e50083c8730bed2b45211c3484ab2c50 *R/demo_httpuv.R
 0ac8d36b127986a2faf9b0e42a2f4125 *R/demo_rhttpd.R
-a965ebc039690d431c1254e04665f7a3 *R/get_boundary.R
+58fa1d93b5be91118fffee790ed02bda *R/get_boundary.R
 360a837e68e228c13365c026e8fd6027 *R/parse_http.R
 616b73753eee326144478ea226e5bed7 *R/parse_multipart.R
 6b3fa089289e627aa8cb12d0eb705895 *R/parse_query.R
@@ -23,6 +23,6 @@ b2c346791c435576d7be9eb22d81f227 *tests/testthat/description.orig
 50cfdda3936e196ffb5c0eccca1255f1 *tests/testthat/iris.orig
 12f1db814335beab91f8d3b968396842 *tests/testthat/logo.orig
 c233475583871bb26d093b1706640feb *tests/testthat/posttypes
-493fdfc9552dcf8da29df4dda0bbd9ce *tests/testthat/test-echo.R
+2da2972161714a5025a13e2162227979 *tests/testthat/test-echo.R
 97c52398efd6cbf5cef5a639038fa728 *tests/testthat/test-encoding.R
 529d2bca1cddda33060130ae5d5529bd *tests/testthat/test-parse.R
