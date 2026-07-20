@@ -1,7 +1,7 @@
-e02f1ad97586f23bb5442ddc8173dae3 *DESCRIPTION
+5c34e667bf99c1eaf5311090c48616e0 *DESCRIPTION
 1ee0683cce6d3479250337954c075d63 *LICENSE
 0a3b86119731bfb2f20a16f7c64d2a4a *NAMESPACE
-0814879ad4d31920b2674d0c0c83c668 *NEWS
+8fbadab9498fba282a7d736bf5a589a4 *NEWS
 e50083c8730bed2b45211c3484ab2c50 *R/demo_httpuv.R
 0ac8d36b127986a2faf9b0e42a2f4125 *R/demo_rhttpd.R
 58fa1d93b5be91118fffee790ed02bda *R/get_boundary.R
@@ -10,14 +10,14 @@ e47ccfa13dab8f8e2cd6096c53264eae *R/parse_multipart.R
 81d4d3f635a583718d74a97bf9833942 *R/parse_query.R
 380bdbd403433141f41e806ddbdacb05 *R/util.R
 c2e0f93503193f7f6e8dd4bdc008e196 *inst/testpage.html
-e463eed305607a900446f86e13946aa0 *man/demo_httpuv.Rd
-27c6149587d67c61c3a80520b67c7e89 *man/demo_rhttpd.Rd
+fde1199411cb82914012e37366d494ff *man/demo_httpuv.Rd
+55ff6b95703856782d8f180eda0467a8 *man/demo_rhttpd.Rd
 bb6b8d4ace31978cf3ff2e4e1309c8dd *man/parse_http.Rd
 6cde09d800519b0ed0ca439df8247cb1 *man/parse_multipart.Rd
 ef049c9bcde8adffaac2ea4b2326545e *man/parse_query.Rd
 fb7033cc923e51999b6d244a1603d193 *src/memmem.c
 b56fbad89241b7653a875c1d3baa83cf *src/register.c
-9c5907103c6c232c24ad444a207707c8 *src/split.c
+547c53f2760b802374e7f4e616745d3a *src/split.c
 954ef331d77f9d124a7ec223c96a9ba5 *tests/testthat.R
 b2c346791c435576d7be9eb22d81f227 *tests/testthat/description.orig
 50cfdda3936e196ffb5c0eccca1255f1 *tests/testthat/iris.orig
